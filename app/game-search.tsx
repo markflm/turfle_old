@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import React, { useMemo, useState } from "react";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
+import { Input } from "@mui/material";
 
 function GameSearch() {
   const [inputValue, setInputValue] = useState("");
@@ -35,7 +36,7 @@ function GameSearch() {
 
   return (
     <Autocomplete
-      style={{ width: 400 + "px" }}
+      className=" bg-white w-full"
       freeSolo
       id="autocomplete-input"
       options={options}
@@ -43,14 +44,21 @@ function GameSearch() {
       inputValue={inputValue}
       open={inputValue.length > 0}
       renderInput={(params) => (
-        <TextField
-          {...params}
-          label="Player Name"
-          InputProps={{
-            ...params.InputProps,
-            type: "search"
-          }}
-        />
+        <Input
+          className="w-full"
+          ref={params.InputProps.ref}
+          inputProps={params.inputProps}
+          autoFocus
+          name="search-input"
+        ></Input>
+        //<TextField
+        //  {...params}
+        //  label="Player Name"
+        //  InputProps={{
+        //    ...params.InputProps,
+        //    type: "search"
+        //  }}
+        ///>
       )}
     />
   );
