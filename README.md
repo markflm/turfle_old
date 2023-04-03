@@ -1,3 +1,10 @@
+## Pocketbase
+
+You should be able to download the Pocketbase on your own machine (https://pocketbase.io/docs/), unzip the exe and move it into the ~/pocketbase folder.
+cd into /pocketbase and you should be able to run a PB server with whatever data is in your branches' pb_data folder using `./pocketbase serve`
+
+## Next.js boilerplate below
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
