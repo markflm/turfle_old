@@ -40,6 +40,8 @@ export type PocketbaseNflPlayerResponse = {
 
 export type PlayerIdAndAutocompleteIdentifier = {
   playerId: string;
+  firstName: string;
+  lastName: string;
   autocompleteIdentifier: string;
   teamImageUrl: string;
 };
